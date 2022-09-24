@@ -5,12 +5,23 @@
     <title>RollDX</title>
 </head>
 <body>
-    <!--1. Need a button
-        2. On click, generate a random number between 1-20
-        3. Display result to user on page
-        4. Make it look nice with CSS
-        5. Profit-->
+    <!--1. Need a button-->
+    <div id="D20result">
+        <p></p>
+    </div>
+    <button type="button" onclick="RollD20()">Roll D20!</button>  
+    <!--2. On click, generate a random number between 1-20-->
+    <script type="text/javascript">
+        function RollD20() {
+        let rd20 = Math.floor((Math.random() * 20) + 1);
+    // 3. Display result to user   
+            document.getElementById("D20result").innerHTML = rd20;
+        }
+    </script>
     
-    <button type="button">Roll D20!</button>
+    <!--4. Make it look nice with CSS-->
+    <!--5. Profit-->
+    
+    
 </body>
 </html>
