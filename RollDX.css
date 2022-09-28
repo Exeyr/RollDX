@@ -82,3 +82,42 @@ body {
     color: gray;
     margin-left: 10px;
 }
+
+.display_area {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.modifier_text {
+    min-width: 60px;
+    min-height: 50px;
+    height: 60px;
+    width: 70px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 20px;
+    background-color: #F7ECDE;
+    color: black; 
+    font-size: large;
+    box-shadow: -2px -2px 5px rgba(255, 255, 255, 0.6),
+    2px 2px 5px rgba(0, 0, 0, 0.5),
+    inset -2px -2px 5px rgba(255, 255, 255, 0.6),
+    inset 2px 2px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 30px;
+    appearance: none;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
