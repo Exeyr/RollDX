@@ -19,7 +19,7 @@
             </div>
         </div>
         <div class="modifier_area">
-            <input class="modifier_text" type="number" id="modifier">
+            <input class="modifier_text" type="number" id="modifier" value="0">
         </div>
     </div>    
     <div class="button_area">    
@@ -39,40 +39,109 @@
     
     <script type="text/javascript">
         
-        let modifier = document.getElementById('modifier');
+        // Check if modifier is undefined or not
+        // If it is, then set the default value to 0
+        var modifier = document.getElementById('modifier');
+
+        if (modifier.value.length == 0){
+            modifier.value = "0";
+        }
+            
 
         function RollD20() {
-            let rd20 = Math.floor((Math.random() * 20) + 1);
-    // 3. Display result to user   
-            document.getElementById("results_box").innerHTML = parseInt(rd20) + parseInt(modifier.value);
+            if (modifier.value.length == 0){
+                modifier.value = "0";
+                RD20();
+            }else {
+                RD20();
+            }
         }
 
+        function RD20() {
+            let rd20 = Math.floor((Math.random() * 20) + 1);
+    // 3. Display result to user 
+            document.getElementById("results_box").innerHTML = parseInt(rd20) + parseInt(modifier.value);  
+        }
+        
         function RollD12() {
+            if (modifier.value.length == 0){
+                modifier.value = "0";
+                RD12();
+            }else {
+                RD12();
+            }
+        }
+        function RD12() {
             let rd12 = Math.floor((Math.random() * 12 ) + 1);
             document.getElementById("results_box").innerHTML = parseInt(rd12) + parseInt(modifier.value);
         }
-        
+
         function RollD10() {
+            if (modifier.value.length == 0){
+                modifier.value = "0";
+                RD10();
+            }else {
+                RD10();
+            }
+        }
+        
+        function RD10() {
             let rd10 = Math.floor((Math.random() * 10 ) + 1);
             document.getElementById("results_box").innerHTML = parseInt(rd10) + parseInt(modifier.value);
         }
 
         function RollD8() {
+            if (modifier.value.length == 0){
+                modifier.value = "0";
+                RD8();
+            }else {
+                RD8();
+            }
+        }
+
+        function RD8() {
             let rd8 = Math.floor((Math.random() * 8 ) + 1);
             document.getElementById("results_box").innerHTML = parseInt(rd8) + parseInt(modifier.value);
         }
 
         function RollD6() {
+            if (modifier.value.length == 0){
+                modifier.value = "0";
+                RD6();
+            }else {
+                RD6();
+            }
+        }
+
+        function RD6() {
             let rd6 = Math.floor((Math.random() * 6 ) + 1);
             document.getElementById("results_box").innerHTML = parseInt(rd6) + parseInt(modifier.value);
         }
 
         function RollD4() {
+            if (modifier.value.length == 0){
+                modifier.value = "0";
+                RD4();
+            }else {
+                RD4();
+            }
+        }
+
+        function RD4() {
             let rd4 = Math.floor((Math.random() * 4 ) + 1);
             document.getElementById("results_box").innerHTML = parseInt(rd4) + parseInt(modifier.value);
         }
 
         function RollDPer() {
+            if (modifier.value.length == 0){
+                modifier.value = "0";
+                RDPer();
+            }else {
+                RDPer();
+            }
+        }
+
+        function RDPer() {
             let rdPer = Math.floor((Math.random() * 100 ) + 1);
             document.getElementById("results_box").innerHTML = rdPer;
         }
